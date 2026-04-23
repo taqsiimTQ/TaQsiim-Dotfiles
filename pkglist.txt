@@ -30,6 +30,7 @@ obs-studio
 opencomic-bin
 os-prober
 otf-font-awesome
+pear-desktop
 proton-vpn-gtk-app
 python
 scrcpy
@@ -51,8 +52,7 @@ visual-studio-code-bin
 vlc
 vlc-plugins-all
 wps-office
-xournalpp
-youtube-music-bin
+xournalpp
 yt-dlp
 zathura
 zen-browser-bin
