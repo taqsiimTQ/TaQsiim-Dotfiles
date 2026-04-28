@@ -27,6 +27,7 @@ network-manager-applet
 nodejs
 ntfs-3g
 obs-studio
+obsidian
 opencomic-bin
 os-prober
 otf-font-awesome
@@ -52,7 +53,8 @@ visual-studio-code-bin
 vlc
 vlc-plugins-all
 wps-office
-xournalpp
+xournalpp
+
 yt-dlp
 zathura
 zen-browser-bin
