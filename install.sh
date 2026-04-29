@@ -23,13 +23,30 @@ ask_user() {
         * ) return 0 ;;
     esac
 }
-
 # --- 1. Stow Configurations ---
 echo -e "\n📦 Setting up Stow configs..."
 CONFIGS=("hypr" "kitty" "matugen" "fastfetch" "nvim")
 
+# Create a backup directory just in case
+BACKUP_DIR="$HOME/.config-backup-$(date +%Y%m%d_%H%M%S)"
+
 for config in "${CONFIGS[@]}"; do
     if ask_user "Do you want to stow $config?"; then
+
+        # Check if the config already exists in ~/.config and is NOT a symlink
+        if [ -e "$HOME/.config/$config" ] && [ ! -L "$HOME/.config/$config" ]; then
+            echo "⚠️  Conflict detected: ~/.config/$config already exists."
+            echo "Moving existing config to $BACKUP_DIR/$config..."
+
+            mkdir -p "$BACKUP_DIR"
+            mv "$HOME/.config/$config" "$BACKUP_DIR/"
+        fi
+
+        # If it IS a symlink but broken or old, we can safely remove it
+        if [ -L "$HOME/.config/$config" ]; then
+            rm "$HOME/.config/$config"
+        fi
+
         echo "Stowing $config..."
         stow -v -t ~ "$config"
     else
@@ -37,20 +54,11 @@ for config in "${CONFIGS[@]}"; do
     fi
 done
 
-# --- 2. Fonts Installation ---
-echo -e "\n🔤 Setting up Fonts..."
-if ask_user "Do you want to copy fonts and update the font cache?"; then
-    echo "Copying fonts..."
-    sudo cp -r Fonts/* /usr/local/share/fonts/WindowsFonts/
-
-    echo "Setting permissions (chmod 644)..."
-    sudo chmod 644 /usr/local/share/fonts/WindowsFonts/*
-
-    echo "Updating font cache..."
-    fc-cache -fv
-else
-    echo "Skipping fonts."
+# Clean up the backup directory if it's empty
+if [ -d "$BACKUP_DIR" ] && [ -z "$(ls -A "$BACKUP_DIR")" ]; then
+    rmdir "$BACKUP_DIR"
 fi
+
 
 # --- 3. Zram Script ---
 echo -e "\n💾 Setting up Zram..."
