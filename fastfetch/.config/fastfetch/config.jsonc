@@ -43,7 +43,7 @@
     {
       "type": "uptime",
       "key": "  󱫐",
-      "format": "{1} hours, {2} mins"
+      "format": "{0} Days, {1} hours, {2} mins"
     },
     {
       "type": "disk",
