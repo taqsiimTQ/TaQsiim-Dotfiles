@@ -54,7 +54,7 @@ vlc
 vlc-plugins-all
 wps-office
 xournalpp
-
+xp-pen-tablet
 yt-dlp
 zathura
 zen-browser-bin
