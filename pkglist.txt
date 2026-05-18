@@ -46,6 +46,7 @@ ttf-meslo-nerd-font-powerlevel10k
 ttf-nerd-fonts-symbols-mono
 ttf-tabler-icons
 ttf-zed-mono-nerd
+tmux
 upscayl-bin
 uwufetch
 vim
@@ -55,6 +56,7 @@ vlc-plugins-all
 wps-office
 xournalpp
 xp-pen-tablet
+yazi
 yt-dlp
 zathura
 zen-browser-bin

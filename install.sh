@@ -25,7 +25,7 @@ ask_user() {
 }
 # --- 1. Stow Configurations ---
 echo -e "\n📦 Setting up Stow configs..."
-CONFIGS=("hypr" "kitty" "matugen" "fastfetch" "nvim")
+CONFIGS=("hypr" "kitty" "matugen" "fastfetch" "nvim" "tmux")
 
 # Create a backup directory just in case
 BACKUP_DIR="$HOME/.config-backup-$(date +%Y%m%d_%H%M%S)"
