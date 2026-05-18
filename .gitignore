@@ -1,0 +1,2 @@
+# Ignore tmux plugins (including TPM)
+tmux/.config/tmux/plugins
