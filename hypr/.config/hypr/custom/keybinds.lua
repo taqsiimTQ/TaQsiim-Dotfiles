@@ -24,6 +24,7 @@ hl.bind(
 	hl.dsp.global("quickshell:wallpaperSelectorToggle"),
 	{ description = "Toggle wallpaper selector" }
 )
+hl.bind("SUPER + F4", hl.dsp.global("quickshell:sessionToggle"), { description = "Shell: Toggle session menu" })
 hl.bind(
 	"CTRL + SUPER + ALT + W",
 	hl.dsp.global("quickshell:wallpaperSelectorRandom"),
@@ -38,7 +39,7 @@ hl.bind(
 )
 
 hl.bind("ALT + F4", hl.dsp.window.close(), { description = "Close active window" })
-hl.bind("SUPER + SHIFT + CTRL + Q", hl.dsp.exec_cmd("hyprctl kill"), { description = "Force kill" })
+hl.bind("ALT + SHIFT + F4", hl.dsp.exec_cmd("hyprctl kill"), { description = "Force kill" })
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle float" })
 
 hl.bind("CTRL + SUPER + SHIFT + Left", hl.dsp.layout("splitratio -0.1"), { repeating = true })
