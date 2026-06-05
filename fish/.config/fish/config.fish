@@ -31,3 +31,11 @@ if status is-interactive
         alias ssh 'kitten ssh'
     end
 end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/taqsiim/.local/bin" $PATH
+
+#using nvim instead of regular vim
+set -gx EDITOR nvim
+set -gx VISUAL nvim
