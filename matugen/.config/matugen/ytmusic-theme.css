@@ -1,0 +1,42 @@
+/* YouTube Music Custom Variables */
+html:not(.style-scope), html {
+  /* Main Backgrounds */
+  --ytmusic-color-black1: #1f2020 !important;
+  --ytmusic-color-black4: #131314 !important;
+  --ytmusic-color-blackOpaque: #131314 !important;
+  --ytmusic-brand-background-solid: #131314 !important;
+  --ytmusic-general-background-a: #131314 !important;
+  --ytmusic-search-background: #1f2020 !important;
+  --yt-spec-base-background: #131314 !important;
+  --yt-spec-menu-background: #292a2b !important;
+
+  /* Text & Icons */
+  --ytmusic-color-white1: #e4e2e3 !important;
+  --ytmusic-text-color: #e4e2e3 !important;
+  --ytmusic-caption-color: #c7c6c7 !important;
+  --yt-spec-text-primary: #e4e2e3 !important;
+  --yt-spec-text-secondary: #c7c6c7 !important;
+  
+  /* Accents & Sliders */
+  --paper-slider-active-color: #bbc8d2 !important;
+  --paper-slider-knob-color: #bbc8d2 !important;
+  --paper-slider-knob-start-color: #bbc8d2 !important;
+  --paper-slider-knob-start-border-color: #bbc8d2 !important;
+}
+
+/* Base Body Application */
+body, ytmusic-app {
+  background: #131314 !important;
+  color: #e4e2e3 !important;
+}
+
+/* Bottom Player Bar */
+#player-bar-background {
+  background-color: #1f2020 !important;
+}
+
+/* Transparent blur effect for the top navigation */
+ytmusic-nav-bar {
+  background: transparent !important;
+  backdrop-filter: blur(12px);
+}
