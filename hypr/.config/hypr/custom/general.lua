@@ -39,7 +39,7 @@ hl.config({
 	},
 	input = {
 		kb_layout = "us,ara",
-		kb_options = "grp:win_space_toggle",
+		kb_options = "grp:win_space_toggle , caps:escape",
 		numlock_by_default = true,
 		repeat_delay = 250,
 		repeat_rate = 35,
