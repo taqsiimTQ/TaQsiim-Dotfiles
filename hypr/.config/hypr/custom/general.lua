@@ -1,3 +1,4 @@
+-- Touchpad gestures
 hl.gesture({
 	fingers = 4,
 	direction = "swipe",
@@ -28,6 +29,7 @@ hl.gesture({
 	end,
 })
 
+-- Gesture and input settings
 hl.config({
 	gestures = {
 		workspace_swipe_distance = 10,
@@ -92,6 +94,7 @@ end
 
 local ii = get_ii_colors()
 
+-- Window group and tab styling
 hl.config({
 	group = {
 		col = {

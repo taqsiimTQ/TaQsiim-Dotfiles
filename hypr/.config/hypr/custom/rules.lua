@@ -1,12 +1,14 @@
+-- Enable blur for all windows
 hl.window_rule({ match = { class = ".*" }, no_blur = false })
 
--- zathura-tabbed
+-- Group Zathura windows into tabs
 hl.window_rule({
 	name = "zathura-tabbed",
 	match = { class = "^(org.pwmt.zathura)$" },
 	group = "set",
 })
--- auto merge zathura tabs
+
+-- Auto-focus existing Zathura window to merge tabs
 hl.on("window.open_early", function(win)
 	if win.class ~= "org.pwmt.zathura" then
 		return
