@@ -48,6 +48,8 @@ hl.bind("CTRL + SUPER + SHIFT + Right", hl.dsp.layout("splitratio +0.1"), { repe
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next(), { description = "Cycle next" })
 hl.bind("ALT + Tab", hl.dsp.window.bring_to_top(), { description = "Bring to top" })
 
+hl.bind("SUPER + Tab", hl.dsp.group.next())
+hl.bind("SUPER + SHIFT + Tab", hl.dsp.group.prev())
 --#/# bind = SUPER+ALT, Hash,, -- Send to workspace -- (1, 2, 3,...)
 for i = 1, 10 do
 	hl.bind("SUPER + SHIFT + " .. (i % 10), function()
